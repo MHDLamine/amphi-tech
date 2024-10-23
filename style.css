@@ -41,7 +41,7 @@ h1, h3,  h4, p:not(#desc){
   }
   
   .nav-links {
-    list-style: none;
+    list-style: flex;
   }
   
   .nav-links li {
@@ -55,7 +55,27 @@ h1, h3,  h4, p:not(#desc){
     padding: 8px 12px;
   }
   
-  .nav-links li a:hover {
+  .nav-links_ li a:hover {
+    background-color: #FF6C4A;
+    transition: background-color 0.3s;
+  }
+
+  .nav-links_ {
+    list-style: flex;
+  }
+  
+  .nav-links_ li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .nav-links_ li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+  }
+  
+  .nav-links_ li a:hover {
     background-color: #FF6C4A;
     transition: background-color 0.3s;
   }
@@ -210,7 +230,7 @@ h1, h3,  h4, p:not(#desc){
   #animated-text {
     display: inline-block;
     position: relative;
-    font-size: 12vh;
+    font-size: 9vh;
 }
 
 .cursor {
@@ -238,6 +258,7 @@ h1, h3,  h4, p:not(#desc){
   
 /* Styles généraux pour les petits écrans */
 @media (max-width: 768px) {
+    
     #animated-text {
       
         font-size: 4vh;
@@ -254,6 +275,16 @@ h1, h3,  h4, p:not(#desc){
     }
 
     .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links_ {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links_ li {
         margin: 10px 0;
     }
 
@@ -305,6 +336,8 @@ h1, h3,  h4, p:not(#desc){
 
 /* Pour les écrans très petits */
 @media (max-width: 480px) {
+
+  
     #animated-text {
       
         font-size: 4vh;
@@ -328,6 +361,11 @@ h1, h3,  h4, p:not(#desc){
     .service-card p {
         font-size: 0.9em; /* Réduit la taille du texte des services */
     }
+  
+  /* Styles pour le navbar */
+.header.scrolled {
+    background-color: #083037; /* Retire la transition de couleur */
+}
 }
 
 
@@ -341,22 +379,19 @@ h1, h3,  h4, p:not(#desc){
     cursor: pointer;
 }
 
-/* Cacher les liens de navigation sur mobile par défaut */
-.nav-links {
-    display: none;
-}
+    /* Cacher les liens de navigation sur mobile par défaut */
+    .nav-links {
+        display: none;
+    }
+    
+    /* Afficher les liens lorsque le menu est ouvert */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
-/* Afficher les liens lorsque le menu est ouvert */
-.nav-links.active {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 
-/* Styles pour le navbar */
-.header.scrolled {
-    background-color: #083037; /* Retire la transition de couleur */
-}
 
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
@@ -366,5 +401,8 @@ h1, h3,  h4, p:not(#desc){
 
     .navbar {
         justify-content: space-between;
+    }
+    .divv{
+        display: none;
     }
 }

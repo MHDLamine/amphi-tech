@@ -28,16 +28,16 @@ window.onscroll = function() {
   header.classList.toggle('scrolled', window.scrollY > 0);
 };
 //le menu burger
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-// Ouvrir et fermer le menu burger
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+    // Ouvrir et fermer le menu burger
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 
-// Fermer le menu lorsque l'un des liens est cliqué
-navLinks.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-});
+    // Fermer le menu lorsque l'un des liens est cliqué
+    navLinks.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
 
