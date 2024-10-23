@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entreprise Numérique</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <nav class="navbar">
+      <a href="#" class="logo">EntrepriseNum</a>
+      <ul class="nav-links">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#services">Nos Services</a></li>
+        <li><a href="#about">À Propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <div class="home-content" data-aos="fade-up">
+      <h1>Bienvenue chez <span>EntrepriseNum</span></h1>
+      <p id="animated-text"></p> <br><br>
+      <a href="#services" class="btn">Découvrez nos services</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2 data-aos="fade-right">Nos Services</h2>
+    
+    <div class="service-card" data-aos="fade-up">
+      <i class="fas fa-laptop-code"></i>
+      <h3 style="margin-top:14px" >Conception et Développement de solution</h3>
+      <p>
+        Nous concevons des solutions numériques adaptées à vos besoins en intégrant la modélisation UML, 
+        la création de maquettes sur Figma, et des simulations pour garantir que chaque aspect de votre projet 
+        est soigneusement planifié avant le développement. Que vous soyez une petite entreprise ou une grande organisation, 
+        nous vous aidons à établir une présence en ligne forte et engageante, en utilisant des technologies de pointe 
+        pour garantir performance et sécurité.
+      </p>
+    </div>
+    
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+      <i class="fas fa-server"></i>
+      <h3>Réalisation et Déploiement</h3>
+      <p>
+        Nous gérons le déploiement et l'hébergement de vos sites web, assurant une mise en ligne rapide et sans encombre. 
+        Grâce à notre expertise en infrastructure, nous optimisons la vitesse et la disponibilité de votre site, 
+        vous permettant de vous concentrer sur votre activité. Notre équipe veille à ce que chaque étape du processus 
+        soit réalisée avec soin, garantissant ainsi un fonctionnement optimal. Que vous ayez besoin d'hébergement partagé, 
+        dédié ou cloud, nous avons la solution idéale pour vous.
+    </p>
+    </div>
+    
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+      <i class="fas fa-tools"></i>
+      <h3>Maintenance et Support</h3>
+      <p>
+        Nous assurons la maintenance régulière et la mise à jour de vos sites pour garantir leur bon fonctionnement. 
+        Avec notre support réactif, vous bénéficiez d'une tranquillité d'esprit, sachant que votre site est entre de bonnes mains. 
+        Nous intervenons rapidement en cas de problème et garantissons que votre contenu reste à jour et sécurisé.
+      </p>
+    </div>
+  </section>
+  
+
+  <section id="about" class="about">
+    <h2 data-aos="fade-right">À Propos de Nous</h2>
+    <p id="desc" data-aos="fade-up">Nous sommes une équipe passionnée, dédiée à offrir des solutions numériques à la pointe de la technologie.</p>
+    <div class="team-image" data-aos="zoom-in">
+      
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card card_">
+                        <img src="img/issa.png" class="image-nous" alt="Notre équipe">
+                        <div class="card-body">
+                            <h4 class="card-title">Lead Developer</h4>
+                            <p class="card-text">Développeur et administrateur de base de données</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <div class="card card_">
+                        <img src="img/sarr.png" class="image-nous" alt="Notre équipe">
+                        <div class="card-body">
+                            <h4 class="card-title">Lead Developer</h4>
+                            <p class="card-text">Développeur et administrateur de base de données</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-3">
+                    <div class="card card_">
+                        <img src="img/ngom1.jpg" class="image-nous" alt="Notre équipe">
+                        <div class="card-body">
+                            <h4 class="card-title">Lead Developer</h4>
+                            <p class="card-text">Développeur et administrateur de base de données</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-3">
+                    <div class="card card_">
+                        <img src="img/sarr.png" class="image-nous" alt="Notre équipe">
+                        <div class="card-body">
+                            <h4 class="card-title">Lead Developer</h4>
+                            <p class="card-text">Développeur et administrateur de base de données</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 data-aos="fade-right">Contactez-nous</h2>
+    <form action="" data-aos="fade-up">
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p style="color: white;" >&copy; 2024 EntrepriseNum. Tous droits réservés.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!-- AOS JS -->
+  <script src="script.js" ></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+  
+</body>
+</html>

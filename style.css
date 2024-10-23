@@ -1,0 +1,370 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  }
+  
+  #services, #contact {
+    font-family: 'Arial', sans-serif;
+    background-color: #083037;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0.03) 75%, transparent 75%, transparent), 
+                      linear-gradient(-45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    color: #ffffff;
+}
+h1, h3,  h4, p:not(#desc){
+    color: #083037;
+}
+  /* Navbar */
+  .header {
+    background-color: #083037;
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #FF6C4A;
+    transition: background-color 0.3s;
+  }
+  
+  .header.scrolled {
+    background-color: #222222;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Home Section */
+  .home {
+    height: 100vh;
+    background-image: url('img/img1.png');
+    background-color: black;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+  
+  .home-content h1 {
+    font-size: 3em;
+    color: white;
+  }
+  
+  .home-content p {
+    color: white;
+    margin: 20px 0;
+  }
+  
+  .home-content .btn {
+    background-color: #FF6C4A;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .home-content .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Services, About, Contact Sections */
+  .services, .about, .contact {
+    padding: 60px;
+    text-align: center;
+  }
+  
+  /* Service Cards */
+  .service-card {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .service-card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #083037;
+  }
+  
+  /* About Section */
+  .about {
+    background-color: #222222;
+    color: white;
+  }
+  
+  .about h2 {
+    color: #FF6C4A;
+  }
+  
+  .about p {
+    margin: 20px 0;
+  }
+  
+  .about .team-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Contact Section */
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact h2 {
+    color: #FF6C4A;
+  }
+  
+  .contact form {
+    width: 45%;
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .contact form button {
+    background-color: #FF6C4A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact form button:hover {
+    background-color: #083037;
+  }
+  
+  .contact .contact-image {
+    width: 45%;
+  }
+  
+  .contact .contact-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #083037;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #animated-text {
+    display: inline-block;
+    position: relative;
+    font-size: 12vh;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px; /* Largeur du curseur */
+    background: #333; /* Couleur du curseur */
+    animation: blink 0.7s infinite;
+}
+.alright{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.image-nous{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 5px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+  
+/* Styles généraux pour les petits écrans */
+@media (max-width: 768px) {
+    #animated-text {
+      
+        font-size: 4vh;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .home-content h1 {
+        font-size: 2em;
+    }
+
+    .home-content .btn {
+        padding: 10px 15px;
+    }
+
+    .services, .about, .contact {
+        padding: 30px;
+    }
+
+    .service-card {
+        width: 100%; /* Prend toute la largeur sur mobile */
+        margin: 10px 0; /* Réduit l'espace entre les cartes */
+    }
+
+    .contact {
+        flex-direction: column; /* Colonne pour le contact */
+        align-items: center;
+    }
+
+    .contact form {
+        width: 100%; /* Formulaire prend toute la largeur */
+    }
+
+    .contact .contact-image {
+        display: none; /* Cache l'image de contact sur mobile */
+    }
+
+    .image-nous {
+        width: 80%; /* Limite la taille des images de l'équipe */
+        height: auto; /* Garde le ratio d'aspect */
+    }
+    .card_{
+        margin-bottom: 20px;
+    }
+}
+
+.card_{
+    display: flex; 
+    justify-content: 
+    center;align-items: 
+    center;padding: 10px;
+}
+
+/* Pour les écrans très petits */
+@media (max-width: 480px) {
+    #animated-text {
+      
+        font-size: 4vh;
+    }
+    .home-content h1 {
+        font-size: 1.5em;
+    }
+
+    .home-content p {
+        font-size: 0.9em;
+    }
+
+    .home-content .btn {
+        font-size: 0.9em;
+    }
+
+    .service-card h3 {
+        font-size: 1.2em; /* Réduit la taille des titres des services */
+    }
+
+    .service-card p {
+        font-size: 0.9em; /* Réduit la taille du texte des services */
+    }
+}
+
+
+/* Styles pour le menu burger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Cacher les liens de navigation sur mobile par défaut */
+.nav-links {
+    display: none;
+}
+
+/* Afficher les liens lorsque le menu est ouvert */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Styles pour le navbar */
+.header.scrolled {
+    background-color: #083037; /* Retire la transition de couleur */
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Affiche le bouton burger sur mobile */
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+}
