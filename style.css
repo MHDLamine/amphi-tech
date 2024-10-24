@@ -491,7 +491,7 @@ ul li::marker {
 }
 
 
-.carousel .slide{
+.carousel .slide .slide_{
   display: block;
 }
 
@@ -499,7 +499,9 @@ ul li::marker {
   display: none;
 }
 
-
+.card-title_{
+  color: black;
+}
 
 
 
@@ -565,7 +567,7 @@ ul li::marker {
 .header.scrolled {
     background-color: #083037; /* Retire la transition de couleur */
 }
-.carousel .slide{
+.slide_{
   display: none;
 }
 .team-image{
@@ -584,7 +586,7 @@ ul li::marker {
     .divv{
         display: none;
     }
-    .carousel .slide{
+    .slide_{
       display: none;
     }
     .team-image{
