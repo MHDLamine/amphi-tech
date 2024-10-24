@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entreprise Numérique</title>
+  <title>Innovatech Solutions</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
@@ -13,13 +13,15 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+  <p id="animated-text"></p> 
   <header class="header">
     <button class="menu-toggle" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
     </button>
     
     <nav class="navbar">
-      <a href="#" class="logo"><img src="./img/innovatech-logo-1.png" alt="logo Innovatech Solutions" width="70" height="70" style="border-radius: 7%;" ></a>
+      <a href="#" class="logo"><img src="./img/innovatech-logo-1.png" alt="logo Innovatech Solutions" width="60" height="60" style="border-radius: 7%;" ></a>
+      <span class="alterne" style="color: white;"> <a href="#" style="text-decoration: none; color: white;" >Innovatech Solutions</a> </span>
       <ul class="nav-links">
         <li><a href="#home">Accueil</a></li>
         <li><a href="#services">Nos Services</a></li>
@@ -33,6 +35,8 @@
             <li><a href="#about">À Propos</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+         
+          
       </div>
       
     </nav>
@@ -40,15 +44,21 @@
 
   <section id="home" class="home">
     <div class="home-content" data-aos="fade-up">
+      <div class="mobile-rek"> <img id="mobile-rek" alt="logo Innovatech Solutions" width="130" height="130" style="border-radius: 50%;" src="./img/innovatech-logo-2.png" ></div>
+     
       <h1>Bienvenue chez <span>Innovatech Solutions</span></h1>
-      <p id="animated-text"></p> <br><br>
+      <br>
+     
       <a href="#services" class="btn">Découvrez nos services</a>
+     
     </div>
   </section>
 
   <section id="services" class="services">
     <h2 data-aos="fade-right">Nos Services</h2>
-    
+    <p data-aos="fade-up" style="text-align: justify; color: white;" >
+      Chez Innovatech Solutions, nous sommes bien plus qu’un cabinet de développement technologique. Forts de plus de 15 ans d'expérience, nous créons des solutions digitales sur mesure qui allient innovation, performance et sécurité. Notre équipe jeune et dynamique intervient dans des secteurs variés pour relever les défis du numérique, en concevant des plateformes web, des applications mobiles, et en intégrant l'intelligence artificielle. Présents en Afrique et en Europe, nous accompagnons les entreprises dans leur transformation digitale et l’amélioration de leur résilience face aux cybermenaces.
+    </p>
     <div class="service-card" data-aos="fade-up">
       <i class="fas fa-laptop-code"></i>
       <h3 style="margin-top:14px" >Conception et Développement de solution</h3>
@@ -87,7 +97,28 @@
 
   <section id="about" class="about">
     <h2 data-aos="fade-right">À Propos de Nous</h2>
-    <p id="desc" data-aos="fade-up">Nous sommes une équipe passionnée, dédiée à offrir des solutions numériques à la pointe de la technologie.</p>
+   <div class="text-apropos">
+    <p data-aos="fade-up" style="text-align: justify; color: white;">
+      Innovatech Solutions est née d'une passion pour la technologie et le développement durable, avec une vision claire : intégrer l'innovation au service des entreprises africaines et internationales. Depuis notre création, nous nous engageons à offrir des solutions technologiques de pointe, accessibles, sécurisées et évolutives, pour répondre aux besoins des entreprises modernes.
+    </p>
+    <p id="desc" data-aos="fade-up" style="text-align: justify;">
+      Dirigée par Issa Ngom, un Tech Lead avec 15 ans d'expertise dans la gestion de projets technologiques complexes en Europe et en Afrique, 
+      notre équipe se compose de jeunes développeurs passionnés et talentueux. Ensemble, nous repoussons les limites de l'innovation 
+      tout en garantissant des solutions robustes et sécurisées à nos clients.
+    </p>
+    <h2 data-aos="fade-right">Valeurs et engagements</h2>
+    <br>
+  
+      
+
+<ul>
+  <li data-aos="fade-down" style="text-align: justify; color: white;" > <strong>Passion pour la technologie </strong>: Toujours à la pointe des nouvelles tendances et des innovations.</li>
+  <li data-aos="fade-down" style="text-align: justify; color: white;" > <strong>Engagement envers la qualité </strong>: Aucun compromis sur l'excellence de nos services.</li>
+  <li data-aos="fade-down" style="text-align: justify; color: white;" > <strong>Développement durable </strong>: Nous développons des solutions technologiques respectueuses de l'environnement et à impact positif.</li>
+</ul>
+
+   
+   </div>
     <div class="team-image" data-aos="zoom-in">
       
         <div class="container">
@@ -96,8 +127,8 @@
                     <div class="card card_">
                         <img src="img/issa.png" class="image-nous" alt="Notre équipe">
                         <div class="card-body">
-                            <h4 class="card-title">Lead Developer</h4>
-                            <p class="card-text">Développeur et administrateur de base de données</p>
+                            <h4 class="card-title">Issa NGOM : Lead Developer</h4>
+                            <p class="card-text">En tant que Lead Developer, </p>
                         </div>
                     </div>
                 </div>
@@ -148,7 +179,7 @@
   </section>
 
   <footer class="footer">
-    <p style="color: white;" >&copy; 2024 EntrepriseNum. Tous droits réservés.</p>
+    <p style="color: white;" >&copy; 2024 Innovatech Solutions. Tous droits réservés.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!-- AOS JS -->

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const text = "Nous proposons des services innovants en création et gestion de sites web.";
+    const text = "Innover pour transformer, développer pour propulser votre réussite";
     const animatedText = document.getElementById("animated-text");
     const cursor = document.createElement("span");
     cursor.className = "cursor";

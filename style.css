@@ -1,5 +1,5 @@
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +8,42 @@
   font-weight: 400;
   font-style: normal;
   }
-  
+ 
+  /*
+    le scrool thumb
+  */
+/* Pour Chrome, Edge, et Safari */
+/* Pour Chrome, Edge, et Safari */
+::-webkit-scrollbar {
+  width: 8px; /* Modifier la largeur du scroll si nécessaire */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Cacher la voie du scroll */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #083037; /* Modifier la couleur du scroll */
+  border-radius: 10px; /* Ajouter un effet de courbure si nécessaire */
+}
+
+/* Cacher les flèches du scrollbar */
+::-webkit-scrollbar-button {
+  display: none; /* Cacher les flèches */
+}
+
+/* Pour Firefox */
+* {
+  scrollbar-width: 10px; /* Réduire la largeur du scroll */
+  scrollbar-color: #083037 transparent; /* Couleur du scroll et de la voie */
+}
+
+/* Cacher les flèches du scrollbar sur Firefox */
+scrollbar-button {
+  display: none; /* Cacher les flèches */
+}
+
+
   #services, #contact {
     font-family: 'Arial', sans-serif;
     background-color: #083037;
@@ -40,10 +75,7 @@ h1, h3,  h4, p:not(#desc){
     text-decoration: none;
   }
   
-  .nav-links {
-    list-style: flex;
-  }
-  
+
   .nav-links li {
     display: inline-block;
     margin-left: 20px;
@@ -60,8 +92,11 @@ h1, h3,  h4, p:not(#desc){
     transition: background-color 0.3s;
   }
 
+
   .nav-links_ {
     list-style: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .nav-links_ li {
@@ -92,16 +127,23 @@ h1, h3,  h4, p:not(#desc){
   /* Home Section */
   .home {
     height: 100vh;
-    background-image: url('img/img1.png');
+    background-image: url('img/fond2.jpg');
+    background-position: center;
     background-color: black;
     background-size: cover;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
     text-align: center;
+    background-position: center;
+    
 
   }
-  
+  .mobile-rek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .home-content h1 {
     font-size: 3em;
     color: white;
@@ -129,6 +171,8 @@ h1, h3,  h4, p:not(#desc){
   .services, .about, .contact {
     padding: 60px;
     text-align: center;
+    box-sizing: border-box;
+    width: 100%;
   }
   
   /* Service Cards */
@@ -228,9 +272,9 @@ h1, h3,  h4, p:not(#desc){
   }
   
   #animated-text {
-    display: inline-block;
-    position: relative;
-    font-size: 9vh;
+    text-align: center;
+    font-size: 4vh;
+    margin-bottom: 0px;
 }
 
 .cursor {
@@ -254,7 +298,9 @@ h1, h3,  h4, p:not(#desc){
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
-
+.alterne{
+  display: none;
+}
   
 /* Styles généraux pour les petits écrans */
 @media (max-width: 768px) {
@@ -325,6 +371,12 @@ h1, h3,  h4, p:not(#desc){
     .card_{
         margin-bottom: 20px;
     }
+    .logo{
+      display: none;
+    }
+    .alterne{
+      display: block;
+    }
 }
 
 .card_{
@@ -333,10 +385,32 @@ h1, h3,  h4, p:not(#desc){
     center;align-items: 
     center;padding: 10px;
 }
+#mobile-rek{
+  display: none;
+}
+
+ul {
+  list-style-type: circle; /* Type de puce en cercle */
+  margin-left: 20px;
+  
+}
+
+ul li{
+  margin-bottom: 20px;
+}
+ul li::marker {
+  color: #FF6C4A;
+}
+
 
 /* Pour les écrans très petits */
 @media (max-width: 480px) {
-
+  #mobile-rek{
+    display: block;
+  }
+    .logo{
+      display: none;
+    }
   
     #animated-text {
       
@@ -360,6 +434,9 @@ h1, h3,  h4, p:not(#desc){
 
     .service-card p {
         font-size: 0.9em; /* Réduit la taille du texte des services */
+    }
+    .alterne{
+      display: block;
     }
   
   /* Styles pour le navbar */
