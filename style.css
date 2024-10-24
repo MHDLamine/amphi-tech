@@ -204,6 +204,8 @@ h1, h3,  h4, p:not(#desc){
     background-color: #222222;
     color: white;
   }
+
+ 
   
   .about h2 {
     color: #FF6C4A;
@@ -489,11 +491,13 @@ ul li::marker {
 }
 
 
+.carousel .slide{
+  display: block;
+}
 
-
-
-
-
+.team-image{
+  display: none;
+}
 
 
 
@@ -561,6 +565,12 @@ ul li::marker {
 .header.scrolled {
     background-color: #083037; /* Retire la transition de couleur */
 }
+.carousel .slide{
+  display: none;
+}
+.team-image{
+  display: block;
+}
 }
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
@@ -573,5 +583,11 @@ ul li::marker {
     }
     .divv{
         display: none;
+    }
+    .carousel .slide{
+      display: none;
+    }
+    .team-image{
+      display: block;
     }
 }
