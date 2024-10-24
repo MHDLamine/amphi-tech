@@ -121,12 +121,13 @@ h1, h3,  h4, p:not(#desc){
     width: 100%;
     top: 0;
     left: 0;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 1s ease-in-out;
   }
   
   /* Home Section */
   .home {
-    height: 100vh;
+    height: 80vh;
+    padding-left: 10px;
     background-image: url('img/fond2.jpg');
     background-position: center;
     background-color: black;
@@ -178,6 +179,7 @@ h1, h3,  h4, p:not(#desc){
   /* Service Cards */
   .service-card {
     display: inline-block;
+    min-height: 50vh;
     width: 30%;
     margin: 20px;
     padding: 20px;
@@ -405,7 +407,117 @@ ul li::marker {
 }
 
 
-/* Pour les écrans très petits */
+
+
+
+/* Styles pour le menu burger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+    /* Cacher les liens de navigation sur mobile par défaut */
+    .nav-links {
+        display: none;
+    }
+    
+    /* Afficher les liens lorsque le menu est ouvert */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    /************************************************services******************************************************* */
+.container-service{
+  display: flex;
+  flex-direction: column;
+}
+.container-service .bloc{
+  display: flex;
+  
+}
+.container-service .bloc .img{
+  border: 10px solid #FF6C4A;
+  background-color: #FF6C4A;
+  width: 300vh;
+  height: 80vh;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 0px;
+  backdrop-filter: blur(20px);
+}
+.container-service .bloc .img img{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 0px;
+}
+
+.container-service .bloc .text{
+ 
+  background-color: #222222;
+  width: 300vh;
+  height: 80vh;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 0px;
+  color: white;
+}
+.container-service .bloc .text p{
+ 
+  
+  color: white;
+}
+
+.service-container{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /********************************************************************************************************* */
+    
+    /********************************************************************************************************* */
+    
+    /*****************************************MOBILE FIRST**************************************************************** */
+    
+    /********************************************************************************************************* */
+    
+    /********************************************************************************************************* */
+
+
+
+
+
+
+
+    /* Pour les écrans très petits */
 @media (max-width: 480px) {
   #mobile-rek{
     display: block;
@@ -446,32 +558,6 @@ ul li::marker {
     background-color: #083037; /* Retire la transition de couleur */
 }
 }
-
-
-/* Styles pour le menu burger */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-    /* Cacher les liens de navigation sur mobile par défaut */
-    .nav-links {
-        display: none;
-    }
-    
-    /* Afficher les liens lorsque le menu est ouvert */
-    .nav-links.active {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-
-
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
     .menu-toggle {
