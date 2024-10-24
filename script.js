@@ -25,7 +25,7 @@ AOS.init({
     /* Navbar Scroll Effect */
 window.onscroll = function() {
   const header = document.querySelector('.header');
-  header.classList.toggle('scrolled', window.scrollY > 0);
+  header.classList.toggle('scrolled', window.scrollY > 12);
 };
 //le menu burger
     const menuToggle = document.querySelector('.menu-toggle');

@@ -23,7 +23,7 @@ h1, h3,  h4, p:not(#desc){
   /* Navbar */
   .header {
     background-color: #083037;
-    padding: 20px;
+    padding: 8px;
     position: relative;
     z-index: 1000;
   }
