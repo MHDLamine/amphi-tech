@@ -483,6 +483,10 @@ ul li::marker {
   flex-wrap: wrap;
 }
 
+#submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
 
 
 

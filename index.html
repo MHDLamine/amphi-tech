@@ -187,13 +187,19 @@
   <section id="contact" class="contact">
     <h2 data-aos="fade-right">Contactez-nous</h2>
     <img data-aos="fade-right" src="./img/innovatech-logo-1.png" width="210" height="210" style="border-radius: 10%; margin-bottom: 20px;">
-    <form action="" data-aos="fade-up">
-      <input type="text" placeholder="Votre nom" required>
-      <input type="email" placeholder="Votre email" required>
-      <textarea placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
+    <form id="contact-form" data-aos="fade-up">
+      <input type="text" id="name" placeholder="Votre nom" required>
+      <input type="email" id="email" placeholder="Votre email" required>
+      <textarea id="message" placeholder="Votre message" required></textarea>
+      <button type="submit" id="submit-btn">Envoyer</button>
     </form>
   </section>
+  <!-- EmailJS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  
+
+  
 
   <footer class="footer">
     <p style="color: white;" >&copy; 2024 Innovatech Solutions. Tous droits réservés.</p>
@@ -204,6 +210,8 @@
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    
   
 </body>
