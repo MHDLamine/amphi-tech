@@ -311,7 +311,7 @@ h1, h3,  h4, p:not(#desc){
     
     #animated-text {
       
-        font-size: 4vh;
+        font-size: 2vh;
     }
     .navbar {
         flex-direction: column;
@@ -522,13 +522,27 @@ ul li::marker {
     /********************************************************************************************************* */
 
 
+.image-partenaires{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5px;
+}
 
+.image-partenaires a {
+  color: white;
+}
 
 
 
 
     /* Pour les écrans très petits */
 @media (max-width: 480px) {
+  .image-partenaires{
+    display: flex;
+    flex-direction: column;
+  }
+  
   #mobile-rek{
     display: block;
   }
@@ -538,7 +552,7 @@ ul li::marker {
   
     #animated-text {
       
-        font-size: 4vh;
+        font-size: 2vh;
     }
     .home-content h1 {
         font-size: 1.5em;
@@ -591,5 +605,9 @@ ul li::marker {
     }
     .team-image{
       display: block;
+    }
+    .image-partenaires{
+      display: flex;
+      flex-direction: column;
     }
 }
