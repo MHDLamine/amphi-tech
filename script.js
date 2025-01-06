@@ -68,15 +68,16 @@ form.addEventListener('submit', function(event) {
   const message = document.getElementById('message').value;
 
   // Préparer les paramètres pour EmailJS
+  const formData_ = `motif : innovatech_contact, Nom : ${name}, Email : ${email}, Message :  ${message}`;
+
   const params = {
-    name: name,
-    email: email,
-    message: message
+    message: formData_
   };
 
   // Envoyer l'email via EmailJS
-  emailjs.send('service_ra9nhq3', 'template_0chkdzq', params)
-    .then(function(response) {
+emailjs
+.send('service_ra9nhq3', 'template_0chkdzq', params)
+    .then(function() {
       // Si l'envoi est réussi
       Swal.fire({
         icon: 'success',
