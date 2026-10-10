@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = { message: `motif : innovatech_contact, Nom : ${name}, Email : ${email}, Message : ${message}` };
 
     try {
-      await emailjs.send("service_ra9nhq3", "template_0chkdzq", params);
+      await emailjs.send("service_3i27ews", "template_33sw05a", params);
       form.reset();
       formStatus.textContent = "Merci pour votre message. Nous vous répondrons sous peu.";
       if (window.Swal) {
