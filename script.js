@@ -89,13 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
-    const params = {
-      from_name: name,
-      name,
-      email,
-      reply_to: email,
-      message: `${message}`
-    };
+    const params = { message: `Nom : ${name},Message : ${message}` };
 
     try {
       await emailjs.send("service_3i27ews", "template_33sw05a", params);
