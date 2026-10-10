@@ -1,106 +1,121 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const text = "Innover pour transformer, développer pour propulser votre réussite";
-    const animatedText = document.getElementById("animated-text");
-    const cursor = document.createElement("span");
-    cursor.className = "cursor";
-    animatedText.appendChild(cursor);
-    
-    let index = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("page-loader");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const header = document.querySelector(".site-header");
+  const form = document.getElementById("contact-form");
+  const submitButton = document.getElementById("submit-btn");
+  const formStatus = document.getElementById("form-status");
+  const loaderStartedAt = performance.now();
+  let loaderHidden = false;
 
-    function type() {
-        if (index < text.length) {
-            animatedText.textContent = text.substring(0, index + 1);
-            index++;
-            setTimeout(type, 100); // Temps d'attente entre chaque lettre
+  if (loader) document.body.classList.add("is-loading");
+
+  function hideLoader() {
+    if (loaderHidden || !loader) return;
+    loaderHidden = true;
+    const remainingTime = Math.max(0, 1200 - (performance.now() - loaderStartedAt));
+    window.setTimeout(() => {
+      loader.classList.add("is-hidden");
+      document.body.classList.remove("is-loading");
+    }, remainingTime);
+  }
+
+  if (document.readyState === "complete") {
+    hideLoader();
+  } else {
+    window.addEventListener("load", hideLoader, { once: true });
+  }
+  window.setTimeout(hideLoader, 3000);
+
+  const revealItems = document.querySelectorAll("[data-reveal]");
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.14 });
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }
+
+  function updateHeader() {
+    header?.classList.toggle("is-scrolled", window.scrollY > 12);
+  }
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  function closeMenu() {
+    navLinks?.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    menuToggle?.setAttribute("aria-label", "Ouvrir le menu");
+  }
+
+  menuToggle?.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+  });
+
+  navLinks?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+
+  const year = document.getElementById("current-year");
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  if (window.emailjs) {
+    emailjs.init("mEV3ZwX7Qyj8dlC7P");
+  }
+
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!window.emailjs) {
+      formStatus.textContent = "Le service de messagerie est momentanément indisponible. Écrivez-nous par e-mail.";
+      return;
     }
 
-    type();
-});
-AOS.init({
-    duration: 1000, // Duration of animations
-    offset: 120, // Offset for triggering animations
-    once: true, // Animations happen only once
+    submitButton.disabled = true;
+    submitButton.innerHTML = 'Envoi en cours... <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>';
+    formStatus.textContent = "";
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const params = { message: `motif : innovatech_contact, Nom : ${name}, Email : ${email}, Message : ${message}` };
+
+    try {
+      await emailjs.send("service_ra9nhq3", "template_0chkdzq", params);
+      form.reset();
+      formStatus.textContent = "Merci pour votre message. Nous vous répondrons sous peu.";
+      if (window.Swal) {
+        window.Swal.fire({
+          icon: "success",
+          title: "Message envoyé avec succès !",
+          text: "Nous vous remercions pour votre message, nous vous répondrons sous peu.",
+          confirmButtonText: "OK"
+        });
+      }
+    } catch (error) {
+      formStatus.textContent = "L'envoi a échoué. Veuillez réessayer ou nous contacter par e-mail.";
+      if (window.Swal) {
+        window.Swal.fire({
+          icon: "error",
+          title: "Erreur lors de l'envoi",
+          text: "Veuillez réessayer plus tard.",
+          confirmButtonText: "OK"
+        });
+      }
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = 'Envoyer le message <i class="fas fa-arrow-right" aria-hidden="true"></i>';
+    }
   });
-    /* Navbar Scroll Effect */
-window.onscroll = function() {
-  const header = document.querySelector('.header');
-  header.classList.toggle('scrolled', window.scrollY > 12);
-};
-//le menu burger
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    // Ouvrir et fermer le menu burger
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Fermer le menu lorsque l'un des liens est cliqué
-    navLinks.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
-
-
-
-
-
-// Initialisation EmailJS
-emailjs.init("mEV3ZwX7Qyj8dlC7P");  // Remplace TON_USER_ID par ton User ID EmailJS
-
-// Sélectionner les éléments du DOM
-const form = document.getElementById('contact-form');
-const submitBtn = document.getElementById('submit-btn');
-
-// Gérer la soumission du formulaire
-form.addEventListener('submit', function(event) {
-    console.log("salut");
-    
-  event.preventDefault(); // Empêcher le rechargement de la page par défaut
-
-  // Désactiver le bouton et changer le texte
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Envoi en cours...";
-
-  // Récupérer les valeurs du formulaire
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-
-  // Préparer les paramètres pour EmailJS
-  const formData_ = `motif : innovatech_contact, Nom : ${name}, Email : ${email}, Message :  ${message}`;
-
-  const params = {
-    message: formData_
-  };
-
-  // Envoyer l'email via EmailJS
-emailjs
-.send('service_ra9nhq3', 'template_0chkdzq', params)
-    .then(function() {
-      // Si l'envoi est réussi
-      Swal.fire({
-        icon: 'success',
-        title: 'Message envoyé avec succès !',
-        text: 'Nous vous remercions pour votre message, nous vous répondrons sous peu.',
-        confirmButtonText: 'OK'
-      });
-
-      // Réinitialiser le bouton et le formulaire
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Envoyer";
-      form.reset(); // Réinitialiser le formulaire
-    }, function(error) {
-      // Si l'envoi échoue
-      Swal.fire({
-        icon: 'error',
-        title: 'Erreur lors de l\'envoi',
-        text: 'Veuillez réessayer plus tard.',
-        confirmButtonText: 'OK'
-      });
-
-      // Réactiver le bouton
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Envoyer";
-    });
 });

@@ -3,362 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Innovatech Solutions</title>
+  <meta name="theme-color" content="#083037">
+  <meta name="description" content="Innovatech Solutions accompagne les entreprises dans leur transformation digitale avec des solutions web, mobiles, IA et cybersécurité.">
+  <title>Innovatech Solutions | Technologie utile, impact durable</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <p id="animated-text"></p> 
-  <header class="header">
-    <button class="menu-toggle" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-    </button>
-    
-    <nav class="navbar">
-      <a href="#" class="logo"><img src="./img/innovatech-logo-1.png" alt="logo Innovatech Solutions" width="60" height="60" style="border-radius: 7%;" ></a>
-      <span class="alterne" style="color: white;"> <a href="#" style="text-decoration: none; color: white;" >Innovatech Solutions</a> </span>
-      <ul class="nav-links">
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#services">Nos Services</a></li>
-        <li><a href="#about">À Propos</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <div class="loader" id="page-loader" role="status" aria-label="Chargement de la page">
+    <img src="img/innovatech-official-logo.png" alt="" width="120" height="120">
+    <span class="loader-caption" aria-label="BUILDING IDEAS FOR A BETTER TOMORROW">BUILDING IDEAS FOR A BETTER TOMORROW</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="Innovatech Solutions, accueil">
+        <img src="img/logo-navbarre.png" alt="" width="190" height="72">
+        <span class="brand-copy">
+          <span class="brand-name">Innovatech <b>Solutions</b></span>
+          <span class="brand-tagline">BUILDING IDEAS FOR A BETTER TOMORROW</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Expertises</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a class="nav-contact" href="#contact">Parlons de votre projet <i class="fas fa-arrow-right" aria-hidden="true"></i></a></li>
       </ul>
-      <div class="divv">
-        <ul class="nav-links_" id="un">
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#services">Nos Services</a></li>
-            <li><a href="#about">À Propos</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-         
-          
-      </div>
-      
     </nav>
   </header>
-<!-- <div class="events" >
-  <div class="div-events" >
-    <img class="img-events"  src="./img/events.gif" alt="evenement" srcset="">
-  </div>
-  
-  <button title="click pour y participer" class="btn-events">
-    <a href="https://forms.gle/yY5dSrjb67p5Kw7e7" target="_blank" >En savoir plus</a>
-  </button>
-</div> -->
 
-  <section id="home" class="home">
-    <div class="home-content" data-aos="fade-up">
-      <div class="mobile-rek"> <img id="mobile-rek" alt="logo Innovatech Solutions" width="130" height="130" style="border-radius: 50%;" src="./img/innovatech-logo-2.png" ></div>
-     
-      <h1>Bienvenue chez <span>Innovatech Solutions</span></h1>
-      <br>
-     
-      <a href="#services" class="btn">Découvrez nos services</a>
-     
-    </div>
-  </section>
-
-  <section id="services" class="services">
-    <h2 data-aos="fade-right">Nos Services</h2>
-    <p data-aos="fade-up" style="text-align: justify; color: white;" >
-      Chez Innovatech Solutions, nous sommes bien plus qu’un cabinet de développement technologique. Forts de plus de 5 ans d'expérience, nous créons des solutions digitales sur mesure qui allient innovation, performance et sécurité. Notre équipe jeune et dynamique intervient dans des secteurs variés pour relever les défis du numérique, en concevant des plateformes web, des applications mobiles, et en intégrant l'intelligence artificielle. Présents en Afrique et en Europe, nous accompagnons les entreprises dans leur transformation digitale et l’amélioration de leur résilience face aux cybermenaces.
-    </p>
-   
-    
-  
-    
-   <div class="service-container">
-    <div class="service-card" data-aos="fade-up">
-      <i class="fas fa-laptop-code"></i>
-      <h3 style="margin-top:14px" >Développement de plateformes web </h3>
-      <p>
-        Nous concevons des plateformes web innovantes et personnalisées, adaptées aux besoins spécifiques de secteurs tels que l’agriculture, la finance et l’éducation. Nos plateformes sont conçues pour offrir convivialité, performance et sécurité, tout en garantissant leur évolutivité pour répondre aux enjeux futurs.
-      </p>
-    </div>
-    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-      <i class="fas fa-mobile-alt"></i>
-      <h3>Développement d’applications mobiles </h3>
-      <p>
-        Nos solutions mobiles interactives sont intuitives et adaptées aux appareils modernes. Que ce soit pour améliorer l'expérience utilisateur ou renforcer la productivité interne, nos applications répondent précisément aux besoins de chaque entreprise.
-    </p>
-    </div>
-    
-    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-      <i class="fas fa-sync-alt"></i>
-      <h3>Consulting en transformation digitale :</h3>
-      <p>
-        Nous accompagnons les entreprises dans leur transition numérique, de la stratégie à la mise en œuvre. Nos consultants vous aident à intégrer les nouvelles technologies pour optimiser vos processus, renforcer votre compétitivité et améliorer votre résilience face aux défis du numérique.
-      </p>
-    </div>
-    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-      <i class="fas fa-shield-alt"></i>
-      <h3>Cyber-sécurité et IA :</h3>
-      <p>
-        Nous offrons des solutions de cybersécurité robustes pour protéger les entreprises contre les menaces numériques croissantes. En intégrant l'intelligence artificielle, nous anticipons les cyberattaques et gérons les risques de manière proactive, vous permettant de rester concentrés sur la croissance de votre entreprise en toute sérénité.
-      </p>
-    </div>
-
-   </div>
-    
-  </section>
-  
-
-  <section id="about" class="about">
-    <h2 data-aos="fade-right">À Propos de Nous</h2>
-   <div class="text-apropos">
-    <p data-aos="fade-up" style="text-align: justify; color: white;">
-      Innovatech Solutions est née d'une passion pour la technologie et le développement durable, avec une vision claire : intégrer l'innovation au service des entreprises africaines et internationales. Depuis notre création, nous nous engageons à offrir des solutions technologiques de pointe, accessibles, sécurisées et évolutives, pour répondre aux besoins des entreprises modernes.
-    </p>
-    <p id="desc" data-aos="fade-up" style="text-align: justify;">
-      Dirigée par Issa Ngom, un Tech Lead avec 15 ans d'expertise dans la gestion de projets technologiques complexes en Europe et en Afrique, 
-      notre équipe se compose de jeunes développeurs passionnés et talentueux. Ensemble, nous repoussons les limites de l'innovation 
-      tout en garantissant des solutions robustes et sécurisées à nos clients.
-    </p>
-    <h2 data-aos="fade-right">Valeurs et engagements</h2>
-    <br>
-  
-      
-
-<ul>
-  <li  class="li" data-aos="fade-down"  > <strong>Passion pour la technologie </strong>: Toujours à la pointe des nouvelles tendances et des innovations.</li>
-  <li class="li" data-aos="fade-down"  > <strong>Engagement envers la qualité </strong>: Aucun compromis sur l'excellence de nos services.</li>
-  <li class="li" data-aos="fade-down"  > <strong>Développement durable </strong>: Nous développons des solutions technologiques respectueuses de l'environnement et à impact positif.</li>
-</ul>
-
-   
-   </div>
-    <div  class="team-image" data-aos="zoom-in">
-    
-        <div class="container">
-          
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card card_">
-                        <img src="img/issa.jpg" class="image-nous" alt="Notre équipe">
-                        <div class="card-body">
-                            <h4 class="card-title_">Issa NGOM : Lead Developer</h4>
-                            <p class="card-text">responsable de la direction technique des projets. Il supervise l'équipe de développement, prend des décisions stratégiques en matière de technologies, et assure la qualité du code et des solutions logicielles livrées</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3">
-                    <div class="card card_">
-                        <img src="img/fall.jpg" class="image-nous" alt="Notre équipe">
-                        <div class="card-body">
-                            <h4 class="card-title_">Mouhammadou FALL : Développeur Fullstack</h4>
-                            <p class="card-text">
-                              Il maîtrise le développement frontend et backend, créant des applications complètes. Elle gère la logique serveur et l'interface utilisateur, assurant une intégration fluide entre ces deux parties pour offrir une expérience utilisateur optimale.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-md-3">
-                    <div class="card card_">
-                        <img src="img/ngom1.jpg" class="image-nous" alt="Notre équipe">
-                        <div class="card-body">
-                            <h4 class="card-title_">Mouhamed Lamine : Data Analyste</h4>
-                            <p class="card-text">Spécialisé dans l'analyse des données et utilise principalement des outils comme Power BI pour créer des rapports interactifs et des tableaux de bord visuels. Il collecte, analyse, et interprète les données afin d'aider l'entreprise à prendre des décisions stratégiques basées sur des insights clairs et pertinents.</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-md-3">
-                    <div class="card card_">
-                        <img src="img/sarr.png" class="image-nous" alt="Notre équipe">
-                        <div class="card-body">
-                            <h4 class="card-title_">Mamadou SARR : Développeur Mobile</h4>
-                            <p class="card-text">
-                              Il se concentre sur la création d'applications mobiles pour iOS et Android. Il développe des solutions performantes et intuitives qui répondent aux besoins des utilisateurs mobiles, garantissant leur fluidité et leur réactivité.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-md-3">
-                  <div class="card card_">
-                      <img src="img/maimouna-fall.png" class="image-nous" alt="Notre équipe">
-                      <div class="card-body">
-                          <h4 class="card-title_">Maimouna FALL : Manager en Ressources Humaines</h4>
-                          <p class="card-text">
-                            Elle gère les talents de l'entreprise, du recrutement à la gestion des compétences. Elle veille à ce que les équipes travaillent dans un environnement sain et productif, favorisant leur développement professionnel.
-                          </p>
-                      </div>
-                  </div> -->
-              </div>
-            </div>
-        </div>
-        
-
-
-       <!--<div class="container-service">
-          <div class="bloc">
-            <div class="img" data-aos=fade-right ><img width="100%" height="100%" src="./img/service1.jpg" alt=""></div>
-            <div class="text">
-              <p>
-                Nous concevons des plateformes web innovantes et personnalisées, adaptées aux besoins spécifiques de secteurs tels que l’agriculture, la finance et l’éducation. Nos plateformes sont conçues pour offrir convivialité, performance et sécurité, tout en garantissant leur évolutivité pour répondre aux enjeux futurs.
-              </p>
-            </div>
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-shade"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span></span> L'innovation au service de vos ambitions</p>
+          <h1>La technologie<br>qui <em>fait avancer</em><br>vos idées.</h1>
+          <p class="hero-intro">Nous imaginons et développons des solutions digitales fiables, pensées pour les usages d'aujourd'hui et les défis de demain.</p>
+          <div class="hero-actions">
+            <a class="text-link" href="#apropos">Qui sommes-nous ? <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </div>
-        --> 
-      </div>
-
-      <!--DEFILEMENT-->
-      <br>
-      <div id="carouselTeam" class="carousel slide slide_" data-bs-ride="carousel"  data-aos="zoom-in">
-        <div class="carousel-inner">
-          
-          <!-- Première carte (active) -->
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center">
-              <div style="min-width: 80vh;"  class="col-md-9">
-                <div class="card card_">
-                  <div class="img-container"><img style="width: 200px;" src="img/issa.jpg" class="image-nous" alt="Issa NGOM"></div>
-                  
-                  <div class="card-body">
-                    <h5 class="card-title_">Issa NGOM : Lead Developer</h5>
-                    <p class="card-text">Responsable de la direction technique des projets. Il supervise l'équipe de développement, prend des décisions stratégiques en matière de technologies, et assure la qualité du code et des solutions logicielles livrées</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Deuxième carte -->
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div style="min-width: 80vh;"  class="col-md-9">
-                <div class="card card_">
-                  <img src="img/fall.jpg" class="image-nous" alt="Fall">
-                  <div class="card-body">
-                    <h4 class="card-title_">Mamadou FALL : Développeur Fullstack</h4>
-                    <p class="card-text">
-                      Il maîtrise le développement frontend et backend, créant des applications complètes. Elle gère la logique serveur et l'interface utilisateur, assurant une intégration fluide entre ces deux parties pour offrir une expérience utilisateur optimale.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Troisième carte -->
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div style="min-width: 80vh;"  class="col-md-9">
-                <div class="card card_">
-                  <img src="img/ngom1.jpg" class="image-nous" alt="Ngom 1">
-                  <div class="card-body">
-                    <h4 class="card-title_">Mouhamed Lamine : Data Analyste</h4>
-                    <p class="card-text">Spécialisé dans l'analyse des données et utilise principalement des outils comme Power BI pour créer des rapports interactifs et des tableaux de bord visuels. Il collecte, analyse, et interprète les données afin d'aider l'entreprise à prendre des décisions stratégiques basées sur des insights clairs et pertinents.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Quatrième carte -->
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div style="min-width: 80vh;"  class="col-md-9">
-                <div class="card card_">
-                  <img src="img/sarr.png" class="image-nous" alt="Sarr">
-                  <div class="card-body">
-                    <h4 class="card-title_">Mamadou SARR : Développeur Mobile</h4>
-                    <p class="card-text">
-                     Il se concentre sur la création d'applications mobiles pour iOS et Android. Il développe des solutions performantes et intuitives qui répondent aux besoins des utilisateurs mobiles, garantissant leur fluidité et leur réactivité.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         <!--  <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div style="min-width: 80vh;"  class="col-md-9">
-                <div class="card card_">
-                  <img src="img/maimouna-fall.png" class="image-nous" alt="Sarr">
-                  <div class="card-body">
-                    <h4 class="card-title_">Maimouna FALL : Manager en Ressources Humaines</h4>
-                    <p class="card-text">
-                      Elle gère les talents de l'entreprise, du recrutement à la gestion des compétences. Elle veille à ce que les équipes travaillent dans un environnement sain et productif, favorisant leur développement professionnel.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          
+        <div class="hero-mark" data-reveal>
+          <img src="img/innovatech-official-logo.png" alt="">
+          <span>Concevoir<br>le prochain.</span>
+          <a class="button button-coral hero-discover" href="#services">Découvrir nos expertises <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
         </div>
-      
-        <!-- Contrôles du carrousel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTeam" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselTeam" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <a class="scroll-cue" href="#services" aria-label="Défiler vers les expertises"><span></span> Explorer</a>
       </div>
-      
-      <!-- Liens Bootstrap à inclure si ce n'est pas déjà fait -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-      
-<br><br>
-      <h2 data-aos="fade-right">Nos Partenaires</h2>
-  
-      
-      <p id="desc" data-aos="fade-up" style="text-align: center;">
-        Nous sommes fiers d'annoncer que notre équipe a participé brièvement à la réalisation de ces projets.
-      </p>
-      <br>
-      <div class="image-partenaires">
-        <a href="https://way2call.group/" target="_blank"> https://way2call.group/  <img title="Visiter le site " src="./img/reff1.png" width="200" height="200" alt=""> </a>
-        <a href="https://precvadiboulel.sn/" target="_blank"> https://precvadiboulel.sn/ <img title="Visiter le site " src="./img/reff2.png" width="200" height="200" alt=""> </a>
+    </section>
+
+    <section class="intro-band" aria-label="Notre engagement">
+      <div class="container intro-band-inner" data-reveal>
+        <p>Du premier échange à la mise en production, nous faisons du numérique un levier concret de croissance.</p>
+        <span class="intro-rule"></span>
+        <span class="intro-note">Afrique <b>·</b> Europe <b>·</b> Partout où vos projets nous mènent</span>
       </div>
-  </section>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2 data-aos="fade-right">Contactez-nous</h2>
-    <img data-aos="fade-right" src="./img/innovatech-logo-1.png" width="210" height="210" style="border-radius: 10%; margin-bottom: 20px;">
-    <form id="contact-form" data-aos="fade-up">
-      <input type="text" id="name" placeholder="Votre nom" required>
-      <input type="email" id="email" placeholder="Votre email" required>
-      <textarea id="message" placeholder="Votre message" required></textarea>
-      <button type="submit" id="submit-btn">Envoyer</button>
-    </form>
-  </section>
+    <section class="services section-pad" id="services">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow eyebrow-dark"><span></span> Ce que nous faisons</p>
+            <h2>Des idées solides.<br><em>Des solutions utiles.</em></h2>
+          </div>
+          <p class="section-lead">Nous réunissons expertise technique et compréhension métier pour créer des outils qui répondent aux vrais enjeux de votre activité.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-item" data-reveal>
+            <span class="service-number">01</span>
+            <i class="fas fa-laptop-code" aria-hidden="true"></i>
+            <h3>Plateformes web</h3>
+            <p>Des plateformes sur mesure, performantes et évolutives, conçues pour accompagner votre activité à chaque étape.</p>
+            <a href="plateformes-web.html" aria-label="Découvrir notre service de plateformes web">Découvrir <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-item" data-reveal>
+            <span class="service-number">02</span>
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            <h3>Applications mobiles</h3>
+            <p>Des expériences mobiles fluides et intuitives, pensées pour vos utilisateurs et adaptées à leurs usages.</p>
+            <a href="applications-mobiles.html" aria-label="Découvrir notre service d'applications mobiles">Découvrir <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-item" data-reveal>
+            <span class="service-number">03</span>
+            <i class="fas fa-sync-alt" aria-hidden="true"></i>
+            <h3>Transformation digitale</h3>
+            <p>Du conseil à la mise en œuvre, nous vous aidons à moderniser vos processus et à saisir les bonnes opportunités.</p>
+            <a href="transformation-digitale.html" aria-label="Découvrir notre accompagnement en transformation digitale">Découvrir <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+          <article class="service-item" data-reveal>
+            <span class="service-number">04</span>
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+            <h3>IA & cybersécurité</h3>
+            <p>Des systèmes mieux protégés et des usages intelligents de l'IA, intégrés avec exigence et responsabilité.</p>
+            <a href="ia-cybersecurite.html" aria-label="Découvrir notre expertise en IA et cybersécurité">Découvrir <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="about section-pad" id="apropos">
+      <div class="container about-layout">
+        <div class="about-visual" data-reveal>
+          <img src="img/service1.jpg" alt="Espace de travail consacré à la conception de solutions numériques" loading="lazy">
+          <div class="about-stamp"><span>2+</span><small>années à<br>faire avancer<br>le numérique</small></div>
+        </div>
+        <div class="about-copy" data-reveal>
+          <p class="eyebrow"><span></span> Innovatech Solutions</p>
+          <h2>La technologie<br>doit avoir <em>du sens.</em></h2>
+          <p class="about-lead">Née d'une passion pour l'innovation et le développement durable, Innovatech Solutions aide les organisations à transformer leurs idées en solutions concrètes.</p>
+          <p>Nous accompagnons des entreprises en Afrique et en Europe avec des outils accessibles, sécurisés et conçus pour durer. Notre approche associe écoute, savoir-faire technique et attention portée à l'impact de chaque projet.</p>
+          <div class="values-list">
+            <div><i class="fas fa-check" aria-hidden="true"></i><span><b>Exigence</b> à chaque étape du projet</span></div>
+            <div><i class="fas fa-check" aria-hidden="true"></i><span><b>Innovation</b> pensée pour vos usages réels</span></div>
+            <div><i class="fas fa-check" aria-hidden="true"></i><span><b>Durabilité</b> comme principe de conception</span></div>
+          </div>
+          <a class="text-link text-link-light" href="#contact">Construisons la suite ensemble <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
 
- 
-  
-  <!-- EmailJS CDN -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <section class="approach section-pad" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="approach-heading" data-reveal>
+          <div>
+            <p class="eyebrow eyebrow-dark"><span></span> Une collaboration simple</p>
+            <h2 id="approach-title">Une bonne idée mérite<br><em>un bon départ.</em></h2>
+          </div>
+          <p>Chaque projet commence par une conversation. Voici comment nous faisons grandir la vôtre, étape par étape.</p>
+        </div>
+        <div class="approach-steps">
+          <article class="approach-step" data-reveal>
+            <span class="approach-index">01 <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            <i class="fas fa-comments approach-icon" aria-hidden="true"></i>
+            <h3>On vous écoute</h3>
+            <p>Nous prenons le temps de comprendre votre contexte, vos objectifs et les personnes qui utiliseront la solution.</p>
+          </article>
+          <article class="approach-step" data-reveal>
+            <span class="approach-index">02 <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            <i class="fas fa-lightbulb approach-icon" aria-hidden="true"></i>
+            <h3>On imagine ensemble</h3>
+            <p>Nous clarifions les priorités et définissons une approche adaptée, avec des étapes et des choix compréhensibles.</p>
+          </article>
+          <article class="approach-step" data-reveal>
+            <span class="approach-index">03 <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            <i class="fas fa-code approach-icon" aria-hidden="true"></i>
+            <h3>On construit durablement</h3>
+            <p>Nous développons, testons et faisons évoluer une solution fiable, en gardant le dialogue ouvert à chaque étape.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  
-
-  
+    <section class="contact section-pad" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-copy" data-reveal>
+          <p class="eyebrow"><span></span> À votre écoute</p>
+          <h2>Votre prochain projet<br>commence <em>ici.</em></h2>
+          <p>Une idée, un besoin ou une question ? Présentez-nous votre projet, nous reviendrons vers vous rapidement.</p>
+          <a class="contact-email" href="mailto:contact@innovatech-solutions.net">contact@innovatech-solutions.net <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+        </div>
+        <form class="contact-form" id="contact-form" data-reveal>
+          <label for="name">Votre nom</label>
+          <input type="text" id="name" name="name" placeholder="Comment vous appelez-vous ?" autocomplete="name" required>
+          <label for="email">Votre adresse e-mail</label>
+          <input type="email" id="email" name="email" placeholder="vous@entreprise.com" autocomplete="email" required>
+          <label for="message">Parlez-nous de votre projet</label>
+          <textarea id="message" name="message" rows="4" placeholder="Quelques mots suffisent pour commencer..." required></textarea>
+          <button type="submit" id="submit-btn" class="button button-coral">Envoyer le message <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p style="color: white;" >&copy; 2024 Innovatech Solutions. Tous droits réservés.</p>
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#accueil">
+        <img src="img/logo-navbarre.png" alt="" width="190" height="72">
+        <span class="brand-copy">
+          <span class="brand-name">Innovatech <b>Solutions</b></span>
+          <span class="brand-tagline">BUILDING IDEAS FOR A BETTER TOMORROW</span>
+        </span>
+      </a>
+      <p>&copy; <span id="current-year">2026</span> Innovatech Solutions. Tous droits réservés.</p>
+      <a class="footer-email" href="mailto:contact@innovatech-solutions.net">contact@innovatech-solutions.net</a>
+      <a class="back-to-top" href="#top" aria-label="Retour en haut"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!-- AOS JS -->
-  <script src="script.js" ></script>
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   
-  
+  <script src="script.js"></script>
 </body>
 </html>
