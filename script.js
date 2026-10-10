@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (year) year.textContent = String(new Date().getFullYear());
 
   if (window.emailjs) {
-    emailjs.init("mEV3ZwX7Qyj8dlC7P");
+    emailjs.init("lGrzT8qzxy1d6JHKG");
   }
 
   form?.addEventListener("submit", async (event) => {
@@ -89,7 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
-    const params = { message: `motif : innovatech_contact, Nom : ${name}, Email : ${email}, Message : ${message}` };
+    const params = {
+      from_name: name,
+      name,
+      email,
+      reply_to: email,
+      message: `motif : innovatech_contact, Nom : ${name}, Email : ${email}, Message : ${message}`
+    };
 
     try {
       await emailjs.send("service_3i27ews", "template_33sw05a", params);
