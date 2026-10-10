@@ -89,7 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
-    const params = { message: `Nom : ${name},Message : ${message}` };
+    const params = {
+      to_email: "contact@innovatech-solutions.net",
+      from_name: name,
+      reply_to: email,
+      name,
+      email,
+      message: `Nom : ${name}, Message : ${message}`
+    };
 
     try {
       await emailjs.send("service_3i27ews", "template_33sw05a", params);
@@ -104,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     } catch (error) {
+      console.error("EmailJS send failed:", error);
       formStatus.textContent = "L'envoi a échoué. Veuillez réessayer ou nous contacter par e-mail.";
       if (window.Swal) {
         window.Swal.fire({
