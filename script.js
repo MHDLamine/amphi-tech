@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       name,
       email,
       reply_to: email,
-      message: `motif : innovatech_contact, Nom : ${name}, Email : ${email}, Message : ${message}`
+      message: `${message}`
     };
 
     try {
